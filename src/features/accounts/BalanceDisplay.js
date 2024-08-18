@@ -1,6 +1,5 @@
-import { connect
+import { connect } from "react-redux";
 
- } from "react-redux";
 function formatCurrency(value) {
   return new Intl.NumberFormat("en", {
     style: "currency",
@@ -8,7 +7,8 @@ function formatCurrency(value) {
   }).format(value);
 }
 
-function BalanceDisplay({ balance}) {
+function BalanceDisplay({ balance }) {
+  console.log(balance)
   return <div className="balance">{formatCurrency(balance)}</div>;
 }
 
