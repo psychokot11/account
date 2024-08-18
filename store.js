@@ -11,7 +11,7 @@ function reducer(state = initialState, action) {
         case 'account/withdwar':
             return {...state, balance: state.balance - action.payload}
         case 'account/requestLoan':
-            if (loan > 0) return state
+            if (state.loan > 0) return state
             return {...state, loan: action.payload}
         case 'account/pauLoan':
             return {...state, loan: 0, loanPurpose: '', balance: state.balance - state.loan}
